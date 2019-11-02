@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by cuongpm/Modularize.
+ * Created by cuongpm/modularize.
  * Date: 8/3/19
  * Time: 12:25 PM
  */

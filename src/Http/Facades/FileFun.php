@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by cuongpm/Modularize.
+ * Created by cuongpm/modularize.
  * User: mac
  * Date: 10/20/18
  * Time: 11:46 PM

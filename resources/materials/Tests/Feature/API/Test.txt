@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by cuongpm/Modularize.
+ * Created by cuongpm/modularize.
  * Author: Fight Light Diamond i.am.m.cuong@gmail.com
  * MIT: 2e566161fd6039c38070de2ac4e4eadd8024a825
  */
@@ -24,8 +24,8 @@ class _class_Test extends TestCase
 
     public function setAuth()
     {
-        $this->setUsername( config('Modularize.test.user_account.username'));
-        $this->setPassword( config('Modularize.test.user_account.password'));
+        $this->setUsername( config('modularize.test.user_account.username'));
+        $this->setPassword( config('modularize.test.user_account.password'));
         $this->setProvider('users');
     }
 

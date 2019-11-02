@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by cuongpm/Modularize.
+ * Created by cuongpm/modularize.
  * User: vincent
  * Date: 4/18/17
  * Time: 3:52 PM

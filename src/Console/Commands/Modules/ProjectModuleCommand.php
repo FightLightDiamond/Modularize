@@ -43,6 +43,8 @@ class ProjectModuleCommand extends Command
      */
 
     private $routeMsg = '';
+    private $routeAPIMsg = '';
+    private $routeAdminMsg = '';
     private $repositoryMsg = '';
 
     public function __construct()
@@ -52,7 +54,7 @@ class ProjectModuleCommand extends Command
 
     public function getBlackTable()
     {
-        return config('Modularize.black_tables');
+        return config('modularize.black_tables');
     }
 
     protected $table, $tables, $namespace, $path, $seed;
@@ -143,7 +145,9 @@ class ProjectModuleCommand extends Command
     {
         $this->info('');
         $this->line('Please copy to app/routes/api.php');
-        $this->info($this->routeMsg);
+        $this->info($this->routeAPIMsg);
+        $this->line('Please copy to app/routes/admin.php');
+        $this->info($this->routeAdminMsg);
         $this->line('Please copy to app/Provider/AppServiceProvider.php at function register()');
         $this->info($this->repositoryMsg);
     }
@@ -213,20 +217,20 @@ class ProjectModuleCommand extends Command
         $name = BuildInput::classe($table);
         $route = BuildInput::route($table);
 
-        $this->routeMsg .= "Route::get('{$route}' , '{$name}AdminController@index'); \n";
-        $this->routeMsg .= "Route::post('{$route}' , '{$name}AdminController@store'); \n";
-        $this->routeMsg .= "Route::get('{$route}/{id}' , '{$name}AdminController@show'); \n";
-        $this->routeMsg .= "Route::put('{$route}/{id}' , '{$name}AdminController@update'); \n";
-        $this->routeMsg .= "Route::patch('{$route}/{id}' , '{$name}AdminController@update'); \n";
-        $this->routeMsg .= "Route::delete('{$route}/{id}' , '{$name}AdminController@destroy'); \n";
-        $this->routeMsg .= "\n";
-        $this->routeMsg .= "Route::get('{$route}' , '{$name}APIController@index'); \n";
-        $this->routeMsg .= "Route::post('{$route}' , '{$name}APIController@store'); \n";
-        $this->routeMsg .= "Route::get('{$route}/{id}' , '{$name}APIController@show'); \n";
-        $this->routeMsg .= "Route::put('{$route}/{id}' , '{$name}APIController@update'); \n";
-        $this->routeMsg .= "Route::patch('{$route}/{id}' , '{$name}APIController@update'); \n";
-        $this->routeMsg .= "Route::delete('{$route}/{id}' , '{$name}APIController@destroy'); \n";
-        $this->routeMsg .= "\n";
+        $this->routeAdminMsg .= "Route::get('{$route}' , '{$name}AdminController@index'); \n";
+        $this->routeAdminMsg .= "Route::post('{$route}' , '{$name}AdminController@store'); \n";
+        $this->routeAdminMsg .= "Route::get('{$route}/{id}' , '{$name}AdminController@show'); \n";
+        $this->routeAdminMsg .= "Route::put('{$route}/{id}' , '{$name}AdminController@update'); \n";
+        $this->routeAdminMsg .= "Route::patch('{$route}/{id}' , '{$name}AdminController@update'); \n";
+        $this->routeAdminMsg .= "Route::delete('{$route}/{id}' , '{$name}AdminController@destroy'); \n";
+        $this->routeAdminMsg .= "\n";
+        $this->routeAPIMsg .= "Route::get('{$route}' , '{$name}APIController@index'); \n";
+        $this->routeAPIMsg .= "Route::post('{$route}' , '{$name}APIController@store'); \n";
+        $this->routeAPIMsg .= "Route::get('{$route}/{id}' , '{$name}APIController@show'); \n";
+        $this->routeAPIMsg .= "Route::put('{$route}/{id}' , '{$name}APIController@update'); \n";
+        $this->routeAPIMsg .= "Route::patch('{$route}/{id}' , '{$name}APIController@update'); \n";
+        $this->routeAPIMsg .= "Route::delete('{$route}/{id}' , '{$name}APIController@destroy'); \n";
+        $this->routeAPIMsg .= "\n";
 
         $this->repositoryMsg .= '$this->app->bind(' . $name . 'Repository::class, ' . $name . 'RepositoryEloquent::class);' . " \n";
     }

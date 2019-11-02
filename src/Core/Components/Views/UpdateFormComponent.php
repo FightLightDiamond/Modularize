@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by cuongpm/Modularize.
+ * Created by cuongpm/modularize.
  * User: vincent
  * Date: 5/23/17
  * Time: 3:32 PM
@@ -116,12 +116,12 @@ class UpdateFormComponent extends BaseComponent
 
     protected function buildExtend()
     {
-        $this->working(DecoHelper::EXTENDS, config('Modularize.extends'));
+        $this->working(DecoHelper::EXTENDS, config('modularize.extends'));
     }
 
     protected function buildContent()
     {
-        $this->working(DecoHelper::CONTENT, config('Modularize.content'));
+        $this->working(DecoHelper::CONTENT, config('modularize.content'));
     }
 
     public function building($input)

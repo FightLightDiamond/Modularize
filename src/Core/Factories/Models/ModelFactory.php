@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by cuongpm/Modularize.
+ * Created by cuongpm/modularize.
  * Author: Fight Light Diamond i.am.m.cuong@gmail.com00
  * Date: 11/2/2016
  * Time: 9:25 AM

@@ -3,7 +3,7 @@
 namespace Modularize\Http\Facades;
 
 /**
- * Created by cuongpm/Modularize.
+ * Created by cuongpm/modularize.
  * User: cuong
  * Date: 10/13/16
  * Time: 9:47 PM

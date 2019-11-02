@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by cuongpm/Modularize.
+ * Created by cuongpm/modularize.
  * Date: 8/9/19
  * Time: 10:10 AM
  */
@@ -56,8 +56,8 @@ trait TestTrait
 
     public function setAuth()
     {
-        $this->setUsername( config('Modularize.test.user_account.username'));
-        $this->setPassword( config('Modularize.test.user_account.username'));
+        $this->setUsername( config('modularize.test.user_account.username'));
+        $this->setPassword( config('modularize.test.user_account.username'));
         $this->setProvider('users');
     }
 

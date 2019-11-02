@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by cuongpm/Modularize.
+ * Created by cuongpm/modularize.
  * User: CPM
  * Date: 7/23/2018
  * Time: 8:46 PM
