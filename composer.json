@@ -1,5 +1,5 @@
 {
-  "name": "cuongpm/Modularize",
+  "name": "cuongpm/modularize",
   "license": "MIT",
   "type": "library",
   "keywords": [ "module", "crud", "editor", "repository", "html", "api", "document", "php", "laravel"],
