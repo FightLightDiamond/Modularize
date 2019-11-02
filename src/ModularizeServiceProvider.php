@@ -17,8 +17,6 @@ use Modularize\Console\Commands\Tables\TableColumn;
 use Modularize\Console\Commands\Tables\TableData;
 use Modularize\Console\Commands\Modules\TestModuleCommand;
 use Modularize\Console\Commands\TransDBCommand;
-use Modularize\Http\Facades\CheckFun;
-use Modularize\Http\Facades\CurlFun;
 use Modularize\Http\Facades\DBFun;
 use Modularize\Http\Facades\FileFun;
 use Modularize\Http\Facades\FormatFun;
@@ -41,10 +39,10 @@ class ModularizeServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'mod');
 
         $this->publishes([
-            __DIR__ . '/../config/Modularize.php' => base_path('config/Modularize.php'),
-        ], 'Modularize');
+            __DIR__ . '/../config/modularize.php' => base_path('config/modularize.php'),
+        ], 'modularize');
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/Modularize.php', 'Modularize');
+        $this->mergeConfigFrom(__DIR__ . '/../config/modularize.php', 'modularize');
 
         if ($this->app->runningInConsole()) {
             $this->commands([
